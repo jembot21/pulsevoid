@@ -38,4 +38,4 @@ function countFiles(directory: string): { files: number; bytes: number } {
 
 const game = countFiles(join(out, 'game'));
 const screenshots = countFiles(join(out, 'screenshots'));
-console.log(`Output verified: ${game.files} game files (${game.bytes} bytes), ${screenshots.files} screenshots (${screenshots.bytes} bytes), ${game.bytes + screenshots.bytes} total bytes.`);
+console.log(`Output verified: ${game.files} game files (${game.bytes} bytes), ${screenshots.files} screenshots (${screenshots.bytes} bytes), ${game.bytes + screenshots.bytes} total bytes, dossier.json ${statSync(join(out, 'dossier.json')).size} bytes.`);
